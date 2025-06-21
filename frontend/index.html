@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>OCR with Confidence Map</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>OCR アプリ (信頼度可視化)</h1>
+  <input type="file" id="fileInput" accept="image/*" />
+  <button id="runBtn">OCR 実行</button>
+  <hr />
+  <h2>結果</h2>
+  <img id="annotated" src="" alt="Annotated result" />
+  <pre id="fullText"></pre>
+
+  <script src="js/api.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
