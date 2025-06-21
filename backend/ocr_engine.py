@@ -28,7 +28,13 @@ def run_ocr(img_path: str, annotated_dir: str, file_id: str) -> OCRResult:
         boxes.append(OCRBox(text=data["text"][i], conf=conf, x=x, y=y, w=w, h=h, color=color))
 
     annotated_name = f"{file_id}_annotated.png"
-    img.save(os.path.join(annotated_dir, annotated_name))
+    annotated_path = os.path.join(annotated_dir, annotated_name)
+    img.save(annotated_path)
+    img.close()
+    try:
+        os.remove(img_path)
+    except OSError:
+        pass
 
     full_text = " ".join([b.text for b in boxes])
     return OCRResult(
