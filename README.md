@@ -1,28 +1,28 @@
 # OCR2.0
 
-This repository contains a simple OCR demo using FastAPI and a small
-JavaScript frontend. The backend provides an `/ocr` API that accepts an
-image, runs Tesseract OCR, and returns detected text together with an
-annotated image.
+このリポジトリには、FastAPI と小さな JavaScript フロントエンドを用いた
+シンプルな OCR デモが含まれています。バックエンドでは画像を受け取り
+Tesseract OCR を実行して、検出したテキストと注釈付き画像を返す
+`/ocr` API を提供します。
 
-## Running the demo
+## デモの実行
 
-1. Install Python dependencies:
+1. Python の依存関係をインストールします:
 
    ```bash
    pip install -r backend/requirements.txt
    ```
 
-   Tesseract itself must also be installed on your system.
+   さらに Tesseract 本体もシステムにインストールしておく必要があります。
 
-2. Start the API server from the `backend` directory:
+2. `backend` ディレクトリから API サーバーを起動します:
 
    ```bash
    uvicorn main:app --reload
    ```
 
-3. Open `frontend/index.html` in your browser. Press the `OCR 実行` button
-   after selecting an image to see the result.
+3. ブラウザで `frontend/index.html` を開きます。画像を選択した後、
+   `OCR 実行` ボタンを押すと結果が表示されます。
 
-The annotated images and uploads are stored under `backend/annotated` and
-`backend/uploads` respectively.
+注釈付き画像とアップロードされたファイルはそれぞれ
+`backend/annotated` と `backend/uploads` に保存されます。
