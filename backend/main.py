@@ -30,3 +30,7 @@ async def ocr(file: UploadFile = File(...)):
 @app.get("/annotated/{image_name}")
 def get_annotated(image_name: str):
     return FileResponse(f"{ANNOTATED_DIR}/{image_name}")
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)

@@ -15,10 +15,12 @@ Tesseract OCR を実行して、検出したテキストと注釈付き画像を
 
    さらに Tesseract 本体もシステムにインストールしておく必要があります。
 
-2. `backend` ディレクトリから API サーバーを起動します:
+2. `backend` ディレクトリから API サーバーを起動します。以下のどちらかの方法を使います:
 
    ```bash
    uvicorn main:app --reload
+   # または
+   python main.py
    ```
 
 3. ブラウザで `frontend/index.html` を開きます。画像を選択した後、
